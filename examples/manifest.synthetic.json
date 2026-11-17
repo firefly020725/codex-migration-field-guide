@@ -1,0 +1,48 @@
+{
+  "format": "unofficial-migration-field-guide-example",
+  "format_version": 1,
+  "synthetic": true,
+  "executable_plan": false,
+  "source": {
+    "host_alias": "source-pc",
+    "app_version": "record-exact-version",
+    "home": "<source-home>"
+  },
+  "destination": {
+    "host_alias": "destination-pc",
+    "home": "<destination-home>",
+    "has_existing_data": true,
+    "existing_data_baseline": null
+  },
+  "threads": [
+    {
+      "id_alias": "thread-root-example",
+      "parent_alias": null,
+      "relative_rollout": "sessions/<date>/rollout-example.jsonl",
+      "frozen_prefix_bytes": null,
+      "frozen_prefix_sha256": null,
+      "collision_class": "unexamined",
+      "post_cutover_authority": "destination-pc",
+      "native_history_check": "not_run",
+      "manual_continuation_check": "not_run"
+    }
+  ],
+  "media": [
+    {
+      "item_alias": "image-example",
+      "old_reference": "<source-home>/generated_images/<thread>/<item>.png",
+      "candidate_source": "<project-root>/assets/example.png",
+      "bytes": null,
+      "sha256": null,
+      "mapping_evidence": null,
+      "restore_strategy": "undecided",
+      "file_check": "not_run",
+      "original_bubble_check": "not_run"
+    }
+  ],
+  "preexisting_missing_references": [],
+  "new_failures": [],
+  "limitations": [
+    "This is a synthetic documentation example, not a Codex import format."
+  ]
+}
